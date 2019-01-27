@@ -24,6 +24,6 @@ server.route({
   },
 });
 
-// init();
+init();
 
 module.exports = server;

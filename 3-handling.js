@@ -16,8 +16,9 @@ const start = async () => {
       return h.file('/Users/Yash_Gupta/codeAcademyPersonal/makeMeHappyHapi/index.html');
     },
   });
-
+  // if (!module.parent) {
   await server.start();
+  // }
 
   console.log('Server running at:', server.info.uri);
 };
