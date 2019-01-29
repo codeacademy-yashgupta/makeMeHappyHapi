@@ -2,7 +2,7 @@ const hapi = require('hapi');
 
 const server = hapi.Server({
   host: 'localhost',
-  port: 3000,
+  port: Number(process.argv[2] || 3000),
 });
 
 const routes = {
@@ -15,6 +15,7 @@ const routes = {
 
 const validate = async (request, username, password, h) => {
   const checkAuth = username === 'hapi' && password === 'auth';
+  console.log(checkAuth);
   return {
     isValid: checkAuth,
     credentials: {

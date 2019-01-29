@@ -1,7 +1,7 @@
 const hapi = require('hapi');
 // const inert = require('inert');
 const route = require('./routes/4-directory.routes.js');
-console.log(module.parent);
+// console.log(module.parent);
 // console.log(route);
 const server = new hapi.Server({
   port: 3000,
